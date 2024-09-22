@@ -53,7 +53,7 @@
 /* Template Backgrounds Start */
 /* ------------------------------------------------*/
 .image-background {
-  background-image: url("https://github.com/vantoanvo/newportfolio/blob/main/img/backgrounds/DSC07444.jpg");
+  background-image: url("https://dummyimage.com/2560x1440/4d4d4d/636363");
 }
 
 /* ------------------------------------------------*/
@@ -3068,6 +3068,8 @@ form textarea:required:valid {
 }
 
 .avatar__socials {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
