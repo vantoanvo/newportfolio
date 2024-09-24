@@ -399,7 +399,7 @@ $(function() {
 const themeBtn = document.querySelector('.color-switcher');
 
 function getCurrentTheme(){
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  let theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light';
   localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
   return theme;
 }
