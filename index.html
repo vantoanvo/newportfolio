@@ -284,13 +284,16 @@
                     <img src="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__image" itemprop="thumbnail" alt="Image description">
                   </a>
                   <figcaption class="gallery__descr" itemprop="caption description">
-                    <h5>Title</h5>
                     <div class="card__tags d-flex flex-wrap">
                       <span class="rounded-tag opposite">Website</span>
                       <span class="rounded-tag opposite">Application Development</span>
                     </div>
-                    <p class="small">I am working on this.
-                    </p>
+                    <p class="small">Demonstrations:</p>
+                    <ul class="video-links">
+                      <li> <i class="fas fa-link"></i> <a href="https://youtube.com/embed/absabfaRdNk" class="video-link" data-fancybox>Fabflix Movie Website & Android App</a></li>
+                      <li> <i class="fas fa-link"></i> <a href="https://youtube.com/embed/uWdV29QXxGU" class="video-link" data-fancybox>Postfix Calculator</a></li>
+                      <li> <i class="fas fa-link"></i> <a href="https://youtube.com/embed/LhN5Fe6GCiE" class="video-link" data-fancybox>Take Away Game</a></li>
+                    </ul>
                   </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
@@ -794,6 +797,25 @@
     </script>
     <script src="js/app.js"></script>
     <script src="js/gallery-init.js"></script>
+    <!-- hide videos-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const galleryItems = document.querySelectorAll('.gallery__item');
+    
+        galleryItems.forEach(item => {
+          item.addEventListener('click', function() {
+            const videoContainer = this.querySelector('.video-links');
+    
+            // Toggle the display of the video container
+            if (videoContainer.style.display === 'none' || videoContainer.style.display === '') {
+              videoContainer.style.display = 'block'; // Show
+            } else {
+              videoContainer.style.display = 'none'; // Hide
+            }
+          });
+        });
+      });
+    </script>
     <!-- Load Scripts End -->
     
   </body>

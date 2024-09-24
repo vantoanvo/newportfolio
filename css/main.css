@@ -4276,6 +4276,9 @@ form textarea:required:valid {
     text-shadow: 0 -5rem var(--t-bright), 0 0 var(--t-bright);
   }
 }
+.video-links {
+  display: none; /* Hide by default */
+}
 
 /* ------------------------------------------------*/
 /* Features Socials End */
