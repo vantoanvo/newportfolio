@@ -55,3 +55,4 @@ mail($admin_email, adopt($form_subject), $message, $headers );
 // Redirect to a thank-you page or display a success message
 header('Location: thank-you.html');
 exit();
+?>
