@@ -2,6 +2,7 @@
 
 $method = $_SERVER['REQUEST_METHOD'];
 
+$message = '';
 //Script Foreach
 $c = true;
 if ( $method === 'POST' ) {
