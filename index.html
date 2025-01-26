@@ -644,7 +644,7 @@ body {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   width: 100%; /* Make sure it fills the container */
-  max-width: 800px; /* Max width for larger screens */
+  max-width: 600px; /* Max width for larger screens */
   height: 0; /* Zero height initially */
 }
 
@@ -655,6 +655,20 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   border: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .video-wrapper {
+    max-width: 90%; /* Adjust width to 90% on mobile screens */
+    padding-top: 56.25%; /* Maintain the aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrapper {
+    max-width: 80%; /* Further reduce width on smaller mobile screens */
+  }
 }
 
 .hidden {
