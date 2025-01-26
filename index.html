@@ -696,25 +696,17 @@ body {
 .facebook-link:hover::before {
   opacity: 0.05;
 }
-
-.video-container iframe {
-  width: 80%; /* Adjust the width of the video for larger screens */
-  max-width: 100%; /* Ensure the video doesn't overflow */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove any extra space below the iframe */
-}
-
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
   .video-container iframe {
-    width: 90%; /* Make the video take up 90% of the screen on mobile */
+    width: 50%; /* Reduce the video size on tablets */
     max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .video-container iframe {
-    width: 95%; /* Make the video take up 95% of the screen on smaller devices */
+    width: 50%; /* Further reduce the video size on small mobile screens */
   }
 }
 
