@@ -434,3 +434,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.querySelectorAll('.tab-link').forEach(tab => {
+  tab.addEventListener('click', function () {
+    const tabId = this.getAttribute('data-tab');
+
+    // Remove 'active' class from all tabs and tab contents
+    document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    // Add 'active' class to clicked tab and corresponding content
+    this.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  });
+});

@@ -4283,3 +4283,53 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
+
+.tabs__nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tab-link.active {
+  background-color: #636363;
+  color: white;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #636363;
+  font-size: 14px;
+  display: block;
+  margin: 5px 0;
+}
+
+ul li a:hover {
+  color: #0056b3;
+}
