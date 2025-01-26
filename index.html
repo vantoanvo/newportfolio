@@ -697,8 +697,16 @@ body {
   opacity: 0.05;
 }
 
-#videoIframe {
-  margin-left: 275px; /* Adjust this value to move the video to the right */
+.video-container iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .video-container iframe {
+    width: 90%;
+    height: auto;
+  }
 }
 
 
