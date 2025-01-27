@@ -288,6 +288,15 @@
     <div class="tabs-content">
       <!-- Web/App Tab -->
       <div id="webapp" class="tab-panel">
+        <!-- Project Website 1 Button -->
+        <button class="project-button" onclick="window.open('https://react-movie-ten-wine.vercel.app/', '_blank')">
+          <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
+          <span>Movie Collections Website Using Next.js</span>
+        </button>
+        <button class="project-button" onclick="window.open('https://coffee-rho-five.vercel.app/', '_blank')">
+          <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
+          <span>Coffee Store Full-Stack Website Using Next.js</span>
+        </button>
         <div class="video-list">
           <button class="video-button" data-url="https://youtube.com/embed/absabfaRdNk">
             <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
@@ -573,6 +582,23 @@ body {
   gap: 1rem;
 }
 
+.project-button {
+  margin-bottom: 1rem; /* Space between the website button and video buttons */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  background: #f8fafc;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
 .video-button {
   display: flex;
   align-items: center;
@@ -621,6 +647,14 @@ body {
   z-index: 2;
 }
 
+.website-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #44a2ef;
+  position: relative;
+  z-index: 2;
+}
 /* Video Container */
 .video-container {
   margin-top: 2rem;
