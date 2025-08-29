@@ -32,6 +32,13 @@
     <meta property="og:image" content="https://mixdesign.club/themeforest/braxton/img/favicon/og-image.jpg">
     <!-- Facebook Metadata End -->
 
+    <!-- Resource Hints for Performance -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/libs.min.js" as="script">
+    <link rel="preload" href="img/avatars/DSC07444_optimized.jpg" as="image">
+    <link rel="dns-prefetch" href="//youtube.com">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    
     <!-- Template Styles Start -->
     <link rel="stylesheet" href="css/loaders/loader.css">
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
@@ -153,7 +160,7 @@
             </div>
           </div>
           <div class="avatar__image">
-            <img src="img/avatars/DSC07444.jpg" alt="Toan Vo - Personal Portfolio">
+            <img src="img/avatars/DSC07444_optimized.jpg" alt="Toan Vo - Personal Portfolio" loading="lazy">
           </div>
         </div>
         <!-- data caption #1 -->
@@ -289,193 +296,251 @@
     <div class="tabs-content">
       <!-- Web/App Tab -->
       <div id="webapp" class="tab-panel">
-        <!-- Project Website 1 Button -->
-        <button class="project-button" onclick="window.open('https://react-movie-ten-wine.vercel.app/', '_blank')">
-          <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
-          <span>Movie Collections Website</span>
-        </button>
-        <button class="project-button" onclick="window.open('https://pokepitch.vercel.app/', '_blank')">
-          <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
-          <span>Poké Pitch Guitar Tunner & Chord Detection</span>
-        </button>
-        <div class="video-list">
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/absabfaRdNk" data-id="webapp-1">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Fabflix Movie Database Website & Android App Using Java, HTML, CSS, JS, Tomcat</span>
+        <div class="tab-content-wrapper" data-tab="webapp">
+          <!-- Project Website 1 Button -->
+          <div class="page-item active-page" data-page="1">
+            <button class="project-button" onclick="window.open('https://react-movie-ten-wine.vercel.app/', '_blank')">
+              <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
+              <span>Movie Collections Website</span>
             </button>
-            <div class="inline-video-container" id="video-webapp-1" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+            <button class="project-button" onclick="window.open('https://pokepitch.vercel.app/', '_blank')">
+              <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
+              <span>Poké Pitch Guitar Tunner & Chord Detection</span>
+            </button>
+            <div class="video-list">
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/absabfaRdNk" data-id="webapp-1">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Fabflix Movie Database Website & Android App Using Java, HTML, CSS, JS, Tomcat</span>
+                </button>
+                <div class="inline-video-container" id="video-webapp-1" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/uWdV29QXxGU" data-id="webapp-2">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Postfix Calculator</span>
+                </button>
+                <div class="inline-video-container" id="video-webapp-2" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/LhN5Fe6GCiE" data-id="webapp-3">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Take Away Game</span>
+                </button>
+                <div class="inline-video-container" id="video-webapp-3" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/uWdV29QXxGU" data-id="webapp-2">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Postfix Calculator</span>
-            </button>
-            <div class="inline-video-container" id="video-webapp-2" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/LhN5Fe6GCiE" data-id="webapp-3">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Take Away Game</span>
-            </button>
-            <div class="inline-video-container" id="video-webapp-3" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
+        </div>
+        <!-- Pagination Container -->
+        <div class="pagination-container" id="webapp-pagination" style="display: none;">
+          <div class="pagination-info"></div>
+          <div class="pagination">
+            <button class="pagination-btn" data-action="prev">‹</button>
+            <div class="pagination-numbers"></div>
+            <button class="pagination-btn" data-action="next">›</button>
           </div>
         </div>
       </div>
 
       <!-- AI Tab -->
       <div id="ai" class="tab-panel">
-        <button class="project-button" onclick="window.open('https://7e398a934f9b.ngrok-free.app', '_blank')">
-          <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
-          <span>Image Extract Summarize and Translate</span>
-        </button>
-        <div class="video-list">
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/K1c1z5_QvQg" data-id="ai-1">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>AI Sudoku Game</span>
+        <div class="tab-content-wrapper" data-tab="ai">
+          <div class="page-item active-page" data-page="1">
+            <button class="project-button" onclick="window.open('https://7e398a934f9b.ngrok-free.app', '_blank')">
+              <img src="img/icons/website-icon.png" alt="Website Icon" class="website-icon" />
+              <span>Image Extract Summarize and Translate</span>
             </button>
-            <button class="video-button" data-url="https://youtube.com/embed/urQqwTcJqTY" data-id="ai-1">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Control Dino Game with Computer Vision</span>
-            </button>
-            <div class="inline-video-container" id="video-ai-1" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+            <div class="video-list">
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/K1c1z5_QvQg" data-id="ai-1">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>AI Sudoku Game</span>
+                </button>
+                <div class="inline-video-container" id="video-ai-1" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/urQqwTcJqTY" data-id="ai-2">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Control Dino Game with Computer Vision</span>
+                </button>
+                <div class="inline-video-container" id="video-ai-2" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <!-- Pagination Container -->
+        <div class="pagination-container" id="ai-pagination" style="display: none;">
+          <div class="pagination-info"></div>
+          <div class="pagination">
+            <button class="pagination-btn" data-action="prev">‹</button>
+            <div class="pagination-numbers"></div>
+            <button class="pagination-btn" data-action="next">›</button>
           </div>
         </div>
       </div>
 
       <!-- IOT Tab -->
       <div id="iot" class="tab-panel">
-        <div class="video-list">
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/TIo1w4sdbNE" data-id="iot-1">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Email Notification with Arduino & ESP8826</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-1" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        <div class="tab-content-wrapper" data-tab="iot">
+          <!-- Page 1 (items 1-10, but we only have 9) -->
+          <div class="page-item active-page" data-page="1">
+            <div class="video-list">
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/TIo1w4sdbNE" data-id="iot-1">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Email Notification with Arduino & ESP8826</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-1" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/tFxUzziCVD0" data-id="iot-2">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Web Scraping with Arduino microcontroller</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-2" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/5rzzl7UOU24" data-id="iot-3">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>LED Dimmer Using Potentialmeter ADC Conversion, PWM Control</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-3" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/KD6Zocrz0Cw" data-id="iot-4">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Calculator Using Keypad & LCD w/o Library</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-4" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/A9qhhGStBXs" data-id="iot-5">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Tone Player with Keypad w/o Library</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-5" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/-BHnjbaAgis" data-id="iot-6">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Highway Traffic Light using Arduino ESP32</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-6" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/GWdIh0WRspA" data-id="iot-7">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Robot Car</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-7" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/U6ciiX7VYLk" data-id="iot-8">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Control External LED w/o Library On Tiva TM4C123GH6PMI7</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-8" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/yxub-Oqb3hw" data-id="iot-9">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>LED Blinky & Pushbutton Control Using Interrupt</span>
+                </button>
+                <div class="inline-video-container" id="video-iot-9" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/tFxUzziCVD0" data-id="iot-2">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Web Scraping with Arduino microcontroller</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-2" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/5rzzl7UOU24" data-id="iot-3">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>LED Dimmer Using Potentialmeter ADC Conversion, PWM Control</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-3" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/KD6Zocrz0Cw" data-id="iot-4">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Calculator Using Keypad & LCD w/o Library</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-4" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/A9qhhGStBXs" data-id="iot-5">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Tone Player with Keypad w/o Library</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-5" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/-BHnjbaAgis" data-id="iot-6">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Highway Traffic Light using Arduino ESP32</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-6" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/GWdIh0WRspA" data-id="iot-7">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Robot Car</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-7" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/U6ciiX7VYLk" data-id="iot-8">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Control External LED w/o Library On Tiva TM4C123GH6PMI7</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-8" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/yxub-Oqb3hw" data-id="iot-9">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>LED Blinky & Pushbutton Control Using Interrupt</span>
-            </button>
-            <div class="inline-video-container" id="video-iot-9" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
+        </div>
+        <!-- Pagination Container -->
+        <div class="pagination-container" id="iot-pagination" style="display: none;">
+          <div class="pagination-info"></div>
+          <div class="pagination">
+            <button class="pagination-btn" data-action="prev">‹</button>
+            <div class="pagination-numbers"></div>
+            <button class="pagination-btn" data-action="next">›</button>
           </div>
         </div>
       </div>
 
       <!-- Music Tab -->
       <div id="music" class="tab-panel">
-        <div class="video-list">
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/IuRvmHHS5-A" data-id="music-1">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Have It All</span>
-            </button>
-            <div class="inline-video-container" id="video-music-1" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        <div class="tab-content-wrapper" data-tab="music">
+          <div class="page-item active-page" data-page="1">
+            <div class="video-list">
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/IuRvmHHS5-A" data-id="music-1">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Have It All</span>
+                </button>
+                <div class="inline-video-container" id="video-music-1" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/VXjq80FDLhI" data-id="music-2">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Somewhere Over The Rainbow</span>
+                </button>
+                <div class="inline-video-container" id="video-music-2" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="video-item">
+                <button class="video-button" data-url="https://youtube.com/embed/bUxDScWlibs" data-id="music-3">
+                  <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Spring Time - Yiruma</span>
+                </button>
+                <div class="inline-video-container" id="video-music-3" style="display: none;">
+                  <iframe frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/VXjq80FDLhI" data-id="music-2">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Somewhere Over The Rainbow</span>
-            </button>
-            <div class="inline-video-container" id="video-music-2" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <button class="video-button" data-url="https://youtube.com/embed/bUxDScWlibs" data-id="music-3">
-              <svg class="youtube-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-              <span>Spring Time - Yiruma</span>
-            </button>
-            <div class="inline-video-container" id="video-music-3" style="display: none;">
-              <iframe width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <a href="https://www.facebook.com/profile.php?id=61561967834102" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="facebook-link">
+              More on Facebook @Rin Vo
+            </a>
           </div>
         </div>
-        <a href="https://www.facebook.com/profile.php?id=61561967834102" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="facebook-link">
-          More on Facebook @Rin Vo
-        </a>
+        <!-- Pagination Container -->
+        <div class="pagination-container" id="music-pagination" style="display: none;">
+          <div class="pagination-info"></div>
+          <div class="pagination">
+            <button class="pagination-btn" data-action="prev">‹</button>
+            <div class="pagination-numbers"></div>
+            <button class="pagination-btn" data-action="next">›</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -487,6 +552,264 @@ document.addEventListener('DOMContentLoaded', function() {
   const tabPanels = document.querySelectorAll('.tab-panel');
   const videoButtons = document.querySelectorAll('.video-button');
   let currentlyOpenVideo = null;
+  
+  // Pagination system
+  const itemsPerPage = 10;
+  const paginationData = {};
+
+  // Initialize pagination for each tab
+  function initializePagination() {
+    const tabWrappers = document.querySelectorAll('.tab-content-wrapper');
+    
+    tabWrappers.forEach(wrapper => {
+      const tabId = wrapper.getAttribute('data-tab');
+      const allItems = [];
+      
+      // Collect all items (project buttons and video items)
+      const projectButtons = wrapper.querySelectorAll('.project-button');
+      const videoItems = wrapper.querySelectorAll('.video-item');
+      
+      // Add project buttons to items array
+      projectButtons.forEach(button => {
+        allItems.push({
+          type: 'project',
+          element: button,
+          originalParent: button.parentNode
+        });
+      });
+      
+      // Add video items to items array
+      videoItems.forEach(item => {
+        allItems.push({
+          type: 'video',
+          element: item,
+          originalParent: item.parentNode
+        });
+      });
+      
+      // Store pagination data
+      paginationData[tabId] = {
+        items: allItems,
+        currentPage: 1,
+        totalPages: Math.ceil(allItems.length / itemsPerPage),
+        wrapper: wrapper
+      };
+      
+      // Create pages and set up pagination
+      createPagesForTab(tabId);
+      setupPaginationControls(tabId);
+    });
+  }
+
+  function createPagesForTab(tabId) {
+    const data = paginationData[tabId];
+    const wrapper = data.wrapper;
+    
+    // Clear existing pages
+    const existingPages = wrapper.querySelectorAll('.page-item');
+    existingPages.forEach(page => page.remove());
+    
+    // Create new pages
+    for (let page = 1; page <= data.totalPages; page++) {
+      const pageDiv = document.createElement('div');
+      pageDiv.className = 'page-item' + (page === 1 ? ' active-page' : '');
+      pageDiv.setAttribute('data-page', page);
+      
+      // Calculate item range for this page
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, data.items.length);
+      
+      // Create containers for different item types
+      const projectContainer = document.createElement('div');
+      const videoListContainer = document.createElement('div');
+      videoListContainer.className = 'video-list';
+      
+      // Add items to this page
+      for (let i = startIndex; i < endIndex; i++) {
+        const item = data.items[i];
+        const clonedElement = item.element.cloneNode(true);
+        
+        if (item.type === 'project') {
+          projectContainer.appendChild(clonedElement);
+        } else {
+          videoListContainer.appendChild(clonedElement);
+        }
+      }
+      
+      // Add containers to page if they have content
+      if (projectContainer.children.length > 0) {
+        pageDiv.appendChild(projectContainer);
+      }
+      if (videoListContainer.children.length > 0) {
+        pageDiv.appendChild(videoListContainer);
+      }
+      
+      // Add Facebook link to last page of music tab
+      if (tabId === 'music' && page === data.totalPages) {
+        const facebookLink = document.querySelector('#music .facebook-link');
+        if (facebookLink) {
+          const clonedLink = facebookLink.cloneNode(true);
+          pageDiv.appendChild(clonedLink);
+        }
+      }
+      
+      wrapper.appendChild(pageDiv);
+    }
+    
+    // Remove original items
+    data.items.forEach(item => {
+      if (item.element.parentNode) {
+        item.element.remove();
+      }
+    });
+    
+    // Show/hide pagination controls
+    const paginationContainer = document.getElementById(tabId + '-pagination');
+    if (data.totalPages > 1) {
+      paginationContainer.style.display = 'flex';
+      updatePaginationDisplay(tabId);
+    } else {
+      paginationContainer.style.display = 'none';
+    }
+  }
+
+  function setupPaginationControls(tabId) {
+    const paginationContainer = document.getElementById(tabId + '-pagination');
+    if (!paginationContainer) return;
+    
+    const prevBtn = paginationContainer.querySelector('[data-action="prev"]');
+    const nextBtn = paginationContainer.querySelector('[data-action="next"]');
+    const numbersContainer = paginationContainer.querySelector('.pagination-numbers');
+    
+    // Previous button
+    prevBtn.addEventListener('click', () => {
+      if (paginationData[tabId].currentPage > 1) {
+        changePage(tabId, paginationData[tabId].currentPage - 1);
+      }
+    });
+    
+    // Next button
+    nextBtn.addEventListener('click', () => {
+      if (paginationData[tabId].currentPage < paginationData[tabId].totalPages) {
+        changePage(tabId, paginationData[tabId].currentPage + 1);
+      }
+    });
+  }
+
+  function changePage(tabId, newPage) {
+    const data = paginationData[tabId];
+    if (newPage < 1 || newPage > data.totalPages) return;
+    
+    // Hide current page
+    const currentPageElement = data.wrapper.querySelector('.page-item.active-page');
+    if (currentPageElement) {
+      currentPageElement.classList.remove('active-page');
+    }
+    
+    // Show new page
+    const newPageElement = data.wrapper.querySelector(`[data-page="${newPage}"]`);
+    if (newPageElement) {
+      newPageElement.classList.add('active-page');
+    }
+    
+    // Update current page
+    data.currentPage = newPage;
+    
+    // Update pagination display
+    updatePaginationDisplay(tabId);
+    
+    // Close any open videos when changing pages
+    if (currentlyOpenVideo) {
+      const videoContainer = document.getElementById('video-' + currentlyOpenVideo);
+      if (videoContainer) {
+        const iframe = videoContainer.querySelector('iframe');
+        videoContainer.style.display = 'none';
+        if (iframe) iframe.src = '';
+        currentlyOpenVideo = null;
+      }
+    }
+    
+    // Re-attach event listeners for video buttons on new page
+    attachVideoButtonListeners();
+  }
+
+  function updatePaginationDisplay(tabId) {
+    const data = paginationData[tabId];
+    const paginationContainer = document.getElementById(tabId + '-pagination');
+    if (!paginationContainer) return;
+    
+    const prevBtn = paginationContainer.querySelector('[data-action="prev"]');
+    const nextBtn = paginationContainer.querySelector('[data-action="next"]');
+    const numbersContainer = paginationContainer.querySelector('.pagination-numbers');
+    const infoContainer = paginationContainer.querySelector('.pagination-info');
+    
+    // Update prev/next button states
+    prevBtn.disabled = data.currentPage === 1;
+    nextBtn.disabled = data.currentPage === data.totalPages;
+    
+    // Update page numbers
+    numbersContainer.innerHTML = '';
+    for (let i = 1; i <= data.totalPages; i++) {
+      const pageBtn = document.createElement('button');
+      pageBtn.className = 'pagination-btn' + (i === data.currentPage ? ' active' : '');
+      pageBtn.textContent = i;
+      pageBtn.addEventListener('click', () => changePage(tabId, i));
+      numbersContainer.appendChild(pageBtn);
+    }
+    
+    // Update info display
+    const startItem = ((data.currentPage - 1) * itemsPerPage) + 1;
+    const endItem = Math.min(data.currentPage * itemsPerPage, data.items.length);
+    infoContainer.textContent = `${startItem}-${endItem} of ${data.items.length}`;
+  }
+
+  function attachVideoButtonListeners() {
+    // Remove existing listeners and reattach to current page video buttons
+    const currentVideoButtons = document.querySelectorAll('.page-item.active-page .video-button');
+    
+    currentVideoButtons.forEach(button => {
+      // Clone the button to remove existing event listeners
+      const newButton = button.cloneNode(true);
+      button.parentNode.replaceChild(newButton, button);
+      
+      // Add new event listener
+      newButton.addEventListener('click', () => {
+        const videoUrl = newButton.getAttribute('data-url');
+        const videoId = newButton.getAttribute('data-id');
+        const videoContainer = document.getElementById('video-' + videoId);
+        
+        if (!videoContainer) return;
+        
+        const iframe = videoContainer.querySelector('iframe');
+
+        // If this video is already open, close it
+        if (currentlyOpenVideo === videoId) {
+          videoContainer.style.display = 'none';
+          if (iframe) iframe.src = '';
+          currentlyOpenVideo = null;
+          return;
+        }
+
+        // Close any currently open video
+        if (currentlyOpenVideo) {
+          const currentVideoContainer = document.getElementById('video-' + currentlyOpenVideo);
+          if (currentVideoContainer) {
+            const currentIframe = currentVideoContainer.querySelector('iframe');
+            currentVideoContainer.style.display = 'none';
+            if (currentIframe) currentIframe.src = '';
+          }
+        }
+
+        // Open the new video with lazy loading parameters
+        if (iframe) {
+          iframe.src = videoUrl + '?autoplay=0&lazy=1';
+          iframe.loading = 'lazy';
+          videoContainer.style.display = 'block';
+          currentlyOpenVideo = videoId;
+        }
+      });
+    });
+  }
 
   // Tab click handler
   tabButtons.forEach(button => {
@@ -502,49 +825,29 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!isActive) {
         button.classList.add('active');
         document.getElementById(targetId).classList.add('active');
+        
+        // Reset to first page when switching tabs
+        if (paginationData[targetId]) {
+          changePage(targetId, 1);
+        }
       }
 
       // Close any currently open video when switching tabs
       if (currentlyOpenVideo) {
         const videoContainer = document.getElementById('video-' + currentlyOpenVideo);
-        const iframe = videoContainer.querySelector('iframe');
-        videoContainer.style.display = 'none';
-        iframe.src = '';
-        currentlyOpenVideo = null;
+        if (videoContainer) {
+          const iframe = videoContainer.querySelector('iframe');
+          videoContainer.style.display = 'none';
+          if (iframe) iframe.src = '';
+          currentlyOpenVideo = null;
+        }
       }
     });
   });
 
-  // Video button click handler
-  videoButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const videoUrl = button.getAttribute('data-url');
-      const videoId = button.getAttribute('data-id');
-      const videoContainer = document.getElementById('video-' + videoId);
-      const iframe = videoContainer.querySelector('iframe');
-
-      // If this video is already open, close it
-      if (currentlyOpenVideo === videoId) {
-        videoContainer.style.display = 'none';
-        iframe.src = '';
-        currentlyOpenVideo = null;
-        return;
-      }
-
-      // Close any currently open video
-      if (currentlyOpenVideo) {
-        const currentVideoContainer = document.getElementById('video-' + currentlyOpenVideo);
-        const currentIframe = currentVideoContainer.querySelector('iframe');
-        currentVideoContainer.style.display = 'none';
-        currentIframe.src = '';
-      }
-
-      // Open the new video
-      iframe.src = videoUrl;
-      videoContainer.style.display = 'block';
-      currentlyOpenVideo = videoId;
-    });
-  });
+  // Initialize everything
+  initializePagination();
+  attachVideoButtonListeners();
 });
 </script>
 
@@ -787,6 +1090,46 @@ body {
   display: none;
 }
 
+/* Inline Video Container Styles - More Balanced Aspect Ratio */
+.inline-video-container {
+  margin-top: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* Limit maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 4/3; /* More square-like aspect ratio instead of wide 16:9 */
+}
+
+.inline-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .inline-video-container {
+    max-width: 95%;
+    aspect-ratio: 16/10; /* Slightly different ratio for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .inline-video-container {
+    max-width: 100%;
+    aspect-ratio: 3/2; /* Even more square on small screens */
+  }
+}
+
 /* Facebook Link */
 .facebook-link {
   display: inline-flex;
@@ -827,6 +1170,78 @@ body {
 
 .facebook-link:hover::before {
   opacity: 0.05;
+}
+
+/* Pagination Styles */
+.pagination-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination-btn:hover {
+  transform: translateY(-1px);
+  border-color: #963ee2;
+  box-shadow: 0 4px 8px -2px rgba(150, 62, 226, 0.25);
+}
+
+.pagination-btn.active {
+  background: linear-gradient(135deg, #963ee2, #ba25eb);
+  color: white;
+  border-color: transparent;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination-btn:disabled:hover {
+  transform: none;
+  border-color: #e5e7eb;
+  box-shadow: none;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.page-item {
+  display: none;
+}
+
+.page-item.active-page {
+  display: block;
 }
 
 </style>
